@@ -1,8 +1,9 @@
 const calculateExpense = () => {
-  const income = document.querySelector("income").value;
-  const food = document.querySelector("food").value;
-  const rent = document.querySelector("rent").value;
-  const clothes = document.querySelectorAll("clothes").value;
+  const income = parseInt(document.querySelector("#income").value);
+  const food = Number(document.querySelector("#food").value);
+  const rent = Number(document.querySelector("#rent").value);
+  const clothes = Number(document.querySelector("#clothes").value);
+  console.log(income, food, rent, clothes);
 
   if (
     income < 0 ||
@@ -18,8 +19,7 @@ const calculateExpense = () => {
     return;
   }
   // calculate expense
-  const expense =
-    parseInt(food) + parseInt(rent) + parseInt(clothes);
+  const expense = parseInt(food) + parseInt(rent) + parseInt(clothes);
 
   // calculate balance
   const balance = parseInt(income.value) - expense;
