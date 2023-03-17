@@ -42,7 +42,7 @@ const calculateSavings = () => {
     alert("Provide positive saving value");
   }
   // console.log(Number(income.value), (savePercentage / 100))
-  const savingAmount = (savePercentage / 100) * Number(income.value);
+  const savingAmount = ((savePercentage / 100) * Number(income.value)).toFixed(2);
 
   // calculate remaining balance
   const balance = Number(document.getElementById("balance").innerText);
